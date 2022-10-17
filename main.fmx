@@ -1,0 +1,121 @@
+object TogyzForm: TTogyzForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Togyz Kumalak by Yernar Shambayev'
+  ClientHeight = 588
+  ClientWidth = 703
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object TogyzRectangle: TRectangle
+    Align = Top
+    Size.Width = 703.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object NewGameSpeedButton: TTMSFMXSpeedButton
+      CanFocus = True
+      GroupName = ''
+      Position.X = 24.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'New game'
+      OnClick = NewGameSpeedButtonClick
+      Version = '1.6.0.0'
+      TabOrder = 0
+    end
+  end
+  object BoardGrid: TTMSFMXGrid
+    Align = Top
+    DisableFocusEffect = False
+    Position.Y = 50.000000000000000000
+    TabOrder = 0
+    Size.Width = 703.000000000000000000
+    Size.Height = 199.000000000000000000
+    Size.PlatformDefault = False
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.TouchScrollingSensitivity = 0.100000001490116100
+    Options.Printing.PageNumberFormat = '%g'
+    OnSelectCell = BoardGridSelectCell
+    Version = '2.3.3.5'
+    Fill.Kind = Solid
+    Stroke.Kind = Solid
+    TopRow = 1
+    LeftCol = 1
+    OnGetCellLayout = BoardGridGetCellLayout
+    OnGetCellReadOnly = BoardGridGetCellReadOnly
+    Columns = <
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end>
+  end
+  object MovesListBox: TListBox
+    Align = Client
+    Size.Width = 703.000000000000000000
+    Size.Height = 339.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 699.000000000000000000
+    Viewport.Height = 335.000000000000000000
+  end
+end
